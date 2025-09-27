@@ -1,0 +1,50 @@
+/* components/footer/footer.css */
+.footer {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer__logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary-black);
+  margin-bottom: 16px;
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.footer__logo:hover {
+  color: var(--accent-light-blue);
+}
+
+.footer__logo-accent {
+  color: var(--accent-blue);
+}
+
+.footer__copyright {
+  font-size: 14px;
+  color: var(--primary-black);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 0;
+  }
+  
+  .footer__logo {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  
+  .footer__copyright {
+    font-size: 13px;
+  }
+}
