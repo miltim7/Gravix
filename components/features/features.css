@@ -1,6 +1,6 @@
 /* components/features/features.css */
 .features {
-  background: var(--white);
+  background: var(--bg-gradient-subtle);
   padding: var(--block-top-indent) 0;
   position: relative;
 }
@@ -72,7 +72,7 @@
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease-out forwards;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 102, 204, 0.12);
 }
 
 .features__item:nth-child(1) { animation-delay: 0.1s; }
