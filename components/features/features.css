@@ -1,7 +1,7 @@
 /* components/features/features.css */
 .features {
   background: var(--white);
-  padding: 150px 0;
+  padding: var(--block-top-indent) 0;
   position: relative;
 }
 

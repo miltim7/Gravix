@@ -1,7 +1,7 @@
 /* components/services/services.css */
 .services {
   background: var(--white);
-  padding: 150px 0;
+  padding: var(--block-top-indent) 0;
   position: relative;
 }
 
@@ -69,6 +69,9 @@
   opacity: 0;
   transform: translateY(40px);
   animation: slideUp 0.8s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .services__card:nth-child(1) { animation-delay: 0.1s; }
@@ -85,15 +88,31 @@
   box-shadow: var(--shadow-heavy);
 }
 
+.services__card-image-container {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  background: #f8f9fa;
+}
+
 .services__card-image {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.services__card:hover .services__card-image {
+  transform: scale(1.05);
 }
 
 .services__card-content {
   padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .services__card-title {
@@ -108,6 +127,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  flex: 1;
 }
 
 .services__card-item {
@@ -162,6 +182,10 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
   }
+  
+  .services__card-image-container {
+    height: 200px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -192,7 +216,13 @@
     font-size: 20px;
   }
   
-  .services__card-image {
-    height: 250px;
+  .services__card-image-container {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services__card-image-container {
+    height: 160px;
   }
 }

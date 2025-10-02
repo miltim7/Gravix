@@ -17,6 +17,8 @@
   --border-radius: 8px;
   --border-radius-lg: 16px;
   --transition: all 0.3s ease;
+
+  --block-top-indent: 100px
 }
 
 * {
