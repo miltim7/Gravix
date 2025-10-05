@@ -1,6 +1,6 @@
 /* components/contacts/contacts.css */
 .contacts {
-  background: var(--gradient-surface);
+  background: var(--primary-bg);
   padding: var(--block-top-indent) 0;
   position: relative;
 }
