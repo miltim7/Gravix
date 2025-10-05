@@ -1,6 +1,6 @@
 /* components/contacts/contacts.css */
 .contacts {
-  background: var(--bg-gradient-subtle);
+  background: var(--gradient-surface);
   padding: var(--block-top-indent) 0;
   position: relative;
 }
@@ -19,14 +19,14 @@
 .contacts__title {
   font-size: 48px;
   font-weight: 800;
-  color: var(--primary-black);
+  color: var(--primary-text);
   margin-bottom: 20px;
   line-height: 1.2;
 }
 
 .contacts__subtitle {
   font-size: 20px;
-  color: var(--medium-gray);
+  color: var(--secondary-text);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -45,14 +45,14 @@
   flex-direction: column;
   align-items: center;
   padding: 40px 30px;
-  background: var(--white);
+  background: var(--card-bg);
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-light);
   transition: var(--transition);
   opacity: 0;
   transform: translateY(30px);
   animation: slideUp 0.8s ease-out forwards;
-  border: 1px solid rgba(0, 102, 204, 0.12);
+  border: 1px solid var(--border-primary);
 }
 
 .contacts__item:nth-child(1) { animation-delay: 0.2s; }
@@ -61,12 +61,13 @@
 .contacts__item:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-medium);
+  border-color: var(--accent-primary);
 }
 
 .contacts__icon-wrapper {
   width: 80px;
   height: 80px;
-  background: rgba(0, 102, 204, 0.1);
+  background: var(--accent-light);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -80,7 +81,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--gradient-blue);
+  background: var(--gradient-primary);
   border-radius: 50%;
   opacity: 0;
   transform: scale(0);
@@ -95,34 +96,34 @@
 .contacts__icon {
   width: 40px;
   height: 40px;
-  fill: var(--accent-blue);
+  fill: var(--accent-primary);
   position: relative;
   z-index: 2;
   transition: var(--transition);
 }
 
 .contacts__item:hover .contacts__icon {
-  fill: var(--white);
+  fill: var(--primary-text);
   transform: scale(1.1);
 }
 
 .contacts__item-title {
   font-size: 24px;
   font-weight: 700;
-  color: var(--primary-black);
+  color: var(--primary-text);
   margin-bottom: 12px;
 }
 
 .contacts__item-link {
   font-size: 18px;
-  color: var(--accent-blue);
+  color: var(--accent-primary);
   text-decoration: none;
   font-weight: 600;
   transition: var(--transition);
 }
 
 .contacts__item-link:hover {
-  color: var(--accent-hover-blue);
+  color: var(--accent-hover);
 }
 
 @keyframes slideUp {
