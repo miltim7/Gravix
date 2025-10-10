@@ -139,7 +139,7 @@
   align-items: center;
   justify-content: center;
   padding: 50px 60px;
-  background: var(--card-bg);
+  background: #dbdbdb;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-light);
   transition: var(--transition);
