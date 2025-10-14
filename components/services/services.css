@@ -100,6 +100,12 @@
   transition: transform 0.3s ease;
 }
 
+/* Исправление для третьей карточки (СКУД) - не обрезать картинку */
+.services__card:nth-child(3) .services__card-image {
+  object-fit: contain;
+  background: var(--secondary-bg);
+}
+
 .services__card:hover .services__card-image {
   transform: scale(1.05);
 }
