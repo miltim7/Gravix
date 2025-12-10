@@ -34,9 +34,10 @@
 
 .contacts__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* 3 карточки в одну строку на десктопе/табе */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 50px;
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -57,6 +58,7 @@
 
 .contacts__item:nth-child(1) { animation-delay: 0.2s; }
 .contacts__item:nth-child(2) { animation-delay: 0.4s; }
+.contacts__item:nth-child(3) { animation-delay: 0.6s; }
 
 .contacts__item:hover {
   transform: translateY(-5px);
@@ -147,7 +149,9 @@
   }
   
   .contacts__grid {
+    /* на табе тоже оставляем 3 колонки, но чуть меньше отступ */
     gap: 35px;
+    max-width: 900px;
   }
 }
 
@@ -165,8 +169,10 @@
   }
   
   .contacts__grid {
+    /* на мобиле карточки друг под другом */
     grid-template-columns: 1fr;
     gap: 25px;
+    max-width: 500px;
   }
   
   .contacts__item {
